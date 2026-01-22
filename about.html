@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - CraftyUG</title>
+  <meta name="description" content="Learn about CraftyUG - Your trusted IT solutions provider in Mbarara, Uganda. Computers, accessories, repairs, and IT services.">
+  <meta name="author" content="CraftyUG">
+  
+  <meta property="og:title" content="About Us - CraftyUG">
+  <meta property="og:description" content="Your trusted IT solutions provider in Mbarara, Uganda since 2017.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="icon" href="favvicon-1.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Additional styles for About Us page */
+    .about-hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .about-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .about-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .about-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+    
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    
+    .about-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .about-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .about-card-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .about-card-content {
+      padding: 25px;
+    }
+    
+    .about-card h3 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .about-card p {
+      color: #4b5563;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .about-feature {
+      text-align: center;
+      padding: 30px 20px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .about-feature-icon {
+      font-size: 2.5rem;
+      color: #3b82f6;
+      margin-bottom: 20px;
+    }
+    
+    .about-feature h4 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+    
+    .about-locations {
+      background: #f8fafc;
+      padding: 60px 0;
+      margin-top: 60px;
+    }
+    
+    .location-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+    
+    .location-card h3 {
+      color: #1e3a8a;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .location-card i {
+      color: #3b82f6;
+    }
+    
+    .owner-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 60px 0;
+    }
+    
+    .owner-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #3b82f6;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    }
+    
+    .owner-quote {
+      max-width: 800px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #4b5563;
+      line-height: 1.8;
+      margin-top: 20px;
+      padding: 20px;
+      border-left: 4px solid #3b82f6;
+      background: #f8fafc;
+    }
+    
+    .services-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .services-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .services-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .services-list i {
+      color: #10b981;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .owner-quote {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <nav class="navbar-inner">
+        <a href="index.html" class="navbar-brand">
+          <div class="navbar-logo">UG</div>
+          <span class="navbar-title"><span>CraftyUG</span></span>
+        </a>
+        
+        <div class="navbar-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="laptops.html" class="nav-link">Laptops</a>
+          <a href="desktops.html" class="nav-link">Desktops</a>
+          <a href="accessories.html" class="nav-link">Accessories</a>
+          <a href="about.html" class="nav-link active">About Us</a>
+        </div>
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </nav>
+      
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="laptops.html" class="nav-link">Laptops</a>
+        <a href="desktops.html" class="nav-link">Desktops</a>
+        <a href="accessories.html" class="nav-link">Accessories</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-bg"></div>
+      <div class="container">
+        <div class="page-header-content">
+          <div class="page-header-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </div>
+          <h1>About CraftyUG</h1>
+          <p>Your trusted partner for premium technology solutions in Mbarara, Uganda since 2017. We provide high-quality computers, accessories, and expert IT services to individuals and businesses.</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Company Story -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="section-header">
+        <h2>Our Story</h2>
+        <p>From a small tech shop to Mbarara's leading IT solutions provider</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card">
+          <img src="473031048_944177141016184_8169355973373590031_n.jpg" alt="CraftyUG Store" class="about-card-img">
+          <div class="about-card-content">
+            <h3>Our Beginnings</h3>
+            <p>Founded in 2017, CraftyUG started as a small computer repair shop on High Street, Mbarara. Our passion for technology and commitment to customer satisfaction quickly helped us grow into a full-service IT company.</p>
+            <p>Today, we operate from two convenient locations in Mbarara, serving both walk-in customers and corporate clients across Western Uganda.</p>
+          </div>
+        </div>
+        
+        <div class="about-card">
+          <img src="489229934_1237851138345690_5024906734381506790_n.jpg" alt="Our Team" class="about-card-img">
+          <div class="about-card-content">
+            <h3>Our Mission</h3>
+            <p>To provide accessible, reliable, and high-quality technology solutions that empower individuals and businesses in Uganda to achieve their goals through innovative technology.</p>
+            <p>We believe that everyone deserves access to quality tech products and expert support, regardless of their technical knowledge or budget.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Owner Section -->
+  <section class="about-section" style="background: #f0f9ff;">
+    <div class="about-container">
+      <div class="owner-section">
+        <img src="492417002_1254926099971527_1544153952530582003_n.jpg" alt="CraftyUG Owner" class="owner-img">
+        <h2>Meet Our Founder</h2>
+        <p>With over 7 years of experience in the IT industry, our founder has built CraftyUG on the principles of integrity, quality, and exceptional customer service.</p>
+        <div class="owner-quote">
+          "At CraftyUG, we don't just sell computers - we provide solutions. Our team is passionate about helping our customers find the right technology for their needs and ensuring they get the most out of their investment."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Physical Services -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="section-header">
+        <h2>Our Physical Services</h2>
+        <p>Visit our stores for expert in-person assistance</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card">
+          <img src="487004682_1231115049019299_3987905397556538195_n.jpg" alt="Computer Repair Service" class="about-card-img">
+          <div class="about-card-content">
+            <h3>Expert Repair Services</h3>
+            <p>Our skilled technicians provide comprehensive computer repair services including:</p>
+            <ul class="services-list">
+              <li><i class="fas fa-tools"></i> Screen replacement and display repairs</li>
+              <li><i class="fas fa-microchip"></i> Hardware diagnostics and component replacement</li>
+              <li><i class="fas fa-bolt"></i> Power supply and charging port repairs</li>
+              <li><i class="fas fa-heartbeat"></i> Computer failure diagnosis and recovery</li>
+              <li><i class="fas fa-laptop-medical"></i> Virus removal and system optimization</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="about-card">
+          <img src="494975173_1258794112918059_953298807181130085_n.jpg" alt="Software Installation" class="about-card-img">
+          <div class="about-card-content">
+            <h3>Software Solutions</h3>
+            <p>We provide professional software installation and configuration services:</p>
+            <ul class="services-list">
+              <li><i class="fab fa-windows"></i> Windows OS installation and activation</li>
+              <li><i class="fas fa-file-excel"></i> Microsoft Office suite installation</li>
+              <li><i class="fas fa-code"></i> General software installation and setup</li>
+              <li><i class="fas fa-shield-alt"></i> Antivirus and security software installation</li>
+              <li><i class="fas fa-cogs"></i> Driver updates and system optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Services -->
+  <section class="about-section" style="background: #f8fafc;">
+    <div class="about-container">
+      <div class="section-header">
+        <h2>Additional Services</h2>
+        <p>Comprehensive IT solutions for all your needs</p>
+      </div>
+      
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="about-feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4>IT Consultation</h4>
+          <p>Expert advice on hardware selection, system setup, and IT infrastructure planning for homes and businesses.</p>
+        </div>
+        
+        <div class="about-feature">
+          <div class="about-feature-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h4>Custom PC Builds</h4>
+          <p>Tailored desktop computers built to your specifications for gaming, business, or creative work.</p>
+        </div>
+        
+        <div class="about-feature">
+          <div class="about-feature-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h4>Networking Solutions</h4>
+          <p>Home and office network setup, Wi-Fi installation, and troubleshooting services.</p>
+        </div>
+        
+        <div class="about-feature">
+          <div class="about-feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>Data Recovery</h4>
+          <p>Professional data recovery services for hard drives, SSDs, and external storage devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="about-locations">
+    <div class="about-container">
+      <div class="section-header">
+        <h2>Our Locations</h2>
+        <p>Visit us at our convenient Mbarara locations</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="location-card">
+          <h3><i class="fas fa-map-marker-alt"></i> Main Branch</h3>
+          <p><strong>Address:</strong> High Street, Mbarara, Uganda</p>
+          <p><strong>Phone:</strong> +256 776 576 547</p>
+          <p><strong>Hours:</strong> Mon-Sat: 8:30 AM - 6:30 PM | Sun: 10:00 AM - 4:00 PM</p>
+          <p>Our flagship store on High Street offers the complete range of CraftyUG products and services.</p>
+        </div>
+        
+        <div class="location-card">
+          <h3><i class="fas fa-map-marker-alt"></i> Western Area Branch</h3>
+          <p><strong>Address:</strong> Builing Western area-Bananuka Rd, Mbarara, Uganda</p>
+          <p><strong>Phone:</strong> +256 776 576 547</p>
+          <p><strong>Hours:</strong> Mon-Sat: 9:00 AM - 6:00 PM</p>
+          <p>Conveniently located to serve customers in the Western area of Mbarara with the same quality products and services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">
+            <div class="navbar-logo">UG</div>
+            <span class="navbar-title" style="color: white;">JOH <span style="color: hsl(210, 80%, 60%);">Technologies</span></span>
+          </a>
+          <p>Your trusted source for premium tech products in Uganda. Quality, reliability, and excellent customer service since 2017.</p>
+        </div>
+        
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="laptops.html">Laptops</a></li>
+            <li><a href="desktops.html">Desktops</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="https://wa.me/256776576547" target="_blank">Contact/Support</a></li>
+
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/256776576547" target="_blank">WhatsApp</a></li>
+            <li><a href="tel:+256776576547">+256 776 576 547</a></li>
+            <li><a href="#">Mbarara, Uganda</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 CraftyUG. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/256776576547" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/jjohyechnologie/" target="_blank" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMobileNav() {
+      const mobileNav = document.getElementById('mobile-nav');
+      if (mobileNav) {
+        mobileNav.classList.toggle('active');
+      }
+    }
+    
+    // Add simple image fallback handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        img.onerror = function() {
+          // Replace broken Instagram links with placeholder images
+          if (this.src.includes('instagram.com')) {
+            if (this.classList.contains('owner-img')) {
+              this.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80';
+            } else {
+              this.src = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+            }
+          }
+        };
+      });
+    });
+  </script>
+</body>
+</html>
